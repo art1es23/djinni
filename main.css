@@ -1,0 +1,291 @@
+*,
+*::before,
+*::afte {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: "Commissioner";
+  line-height: 150%;
+  font-size: 16px;
+  color: #666666;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.nav-link {
+  color: #666666;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  margin: 0;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 16/9;
+}
+
+.btn {
+  color: #000000;
+}
+
+.img-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: clamp(10rem, 20vh, 12.5rem);
+  overflow: hidden;
+}
+
+.loader {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.loader.show {
+  display: flex;
+}
+
+.item-title {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.item-description {
+  font-weight: 400;
+  max-height: 3rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.read-more-button {
+  border: none;
+  font-weight: 500;
+  background-color: transparent;
+  padding: 0;
+}
+
+.navbar-nav .nav-link.link-active {
+  color: #000000;
+  font-weight: 700;
+  position: relative;
+}
+
+.link-active:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  border-radius: 3px;
+  background-color: #ed7135;
+}
+
+.page-title,
+.item-title {
+  color: #000000;
+}
+
+.page-actions {
+  border-radius: 8px;
+}
+
+.page-actions__item--active {
+  border: 2px solid #000000;
+  border-right: 0;
+  background-color: #000000;
+  color: #ffffff;
+
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.page-actions__item:not(.page-actions__item--active) {
+  border: 2px solid #ebebeb;
+  border-left: none;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.button-active {
+  background-color: #ed7135;
+  color: #ffffff;
+}
+
+.button-share {
+  border: 2px solid #ebebeb;
+}
+
+.page-count-items {
+  color: #666666;
+}
+
+.search-form {
+  position: relative;
+}
+
+.search-form i {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(100%, -50%);
+}
+
+.search-form__input {
+  padding: 0.5rem 0.75rem 0.5rem 2.75rem;
+  border: none;
+  border-radius: 100px;
+  background-color: #eeeeee;
+  font-size: 16px;
+}
+
+.filter-trigger {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  width: auto;
+  transform: translateY(-50%);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #ed7135;
+}
+
+.filter-trigger--active {
+  left: 12.5rem;
+}
+
+.filter-trigger span {
+  writing-mode: vertical-lr;
+  word-wrap: break-word;
+}
+
+.filter-tabs--show {
+  display: flex;
+  position: fixed;
+  height: 100vh;
+  width: 12.5rem;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  justify-content: center;
+}
+
+@media screen and (min-width: 576px) {
+  .img-wrapper {
+    height: clamp(9rem, 15vw, 15rem);
+  }
+  .item {
+    width: calc(50% - 12px);
+  }
+}
+
+@media screen and (min-width: 991px) {
+  .navbar-nav {
+    height: 100%;
+  }
+}
+
+.dark {
+  background-color: #1c2e4a;
+  color: #ffffff;
+}
+
+.dark .navbar-light .navbar-toggler {
+  color: #ffffff;
+  /* background-color: #000000; */
+  border: none;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.dark .page-title,
+.dark .item-title {
+  color: #ffffff;
+}
+
+.dark .btn {
+  color: #ffffff;
+}
+
+.dark .nav-link {
+  color: #668bc2;
+}
+
+.dark .nav-link.link-active {
+  color: #ffffff;
+}
+
+.dark .link-active:after {
+  background-color: #ffffff;
+}
+
+.dark .page-actions__item--active {
+  border-color: #23395d;
+  background-color: #23395d;
+}
+
+.dark .page-actions__item:not(.page-actions__item--active) {
+  border: 1px solid #23395d;
+}
+.dark .button-active {
+  background-color: #23395d;
+  color: #ffffff;
+}
+
+.dark .filter-trigger {
+  background-color: #23395d;
+}
+
+.dark .read-more-button {
+  color: #ffffff;
+}
+
+.dark .border {
+  border: 1px solid #23395d !important;
+}
+.dark .border-top {
+  border-top: 1px solid #23395d !important;
+}
+.dark .border-bottom {
+  border-bottom: 1px solid #23395d !important;
+}
+
+.dark .button-share {
+  border: none;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+}
+
+.dark .search-form__input {
+  background-color: #23395d;
+  color: #ffffff;
+}
